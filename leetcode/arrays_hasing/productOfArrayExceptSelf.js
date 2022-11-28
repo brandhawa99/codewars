@@ -3,11 +3,11 @@
  * @return {number[]}
  */
 var productExceptSelf = function(nums) {
-  let res = [1];
+  let res = [];
   let pre = 1; 
-  for(let i = 1 ; i < nums.length; i++){
-    res[i] = nums[i-1]*pre; 
-    pre *= nums[i-1]; 
+  for(let i = 0 ; i < nums.length; i++){
+    res[i] = pre; 
+    pre *= nums[i]; 
   }
   pre = 1; 
   for(let i =  nums.length-1 ; i >= 0; i--){
