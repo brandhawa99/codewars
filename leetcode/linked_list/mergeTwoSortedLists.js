@@ -13,8 +13,11 @@
 
 
 var mergeTwoLists = function (list1, list2) {
+  //pointer for start of the list
   let head = { val: null, next: null }
+  //pointer for end of list
   let curr = head;
+
 
   while (list1, list2) {
     if (list1.val < list2.val) {
@@ -27,6 +30,8 @@ var mergeTwoLists = function (list1, list2) {
     curr = curr.next;
   }
 
+  // add finished list to end of curr
   curr.next = (list1 || list2);
+
   return head.next;
 }
