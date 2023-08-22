@@ -33,5 +33,6 @@ var mergeTwoLists = function (list1, list2) {
   // add finished list to end of curr
   curr.next = (list1 || list2);
 
+  // return head.next because first value is just a placeholder
   return head.next;
 }
