@@ -15,6 +15,16 @@ const findMid = (head) => {
 }
 
 const reverse = (head) => {
+  let [prev, next, curr] = [null, null, head];
+
+  while (curr) {
+    next = curr.next;
+    curr.next = prev;
+
+    prev = curr;
+    curr = next;
+  }
+  return prev;
 
 }
 
