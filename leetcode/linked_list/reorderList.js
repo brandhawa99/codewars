@@ -29,5 +29,18 @@ const reverse = (head) => {
 }
 
 const reorder = (l1, l2) => {
+  let [first, second, next] = [l1, l2, null];
+
+  while (second.next) {
+    next = first.next;
+    first.next = second;
+    first = next;
+
+
+    next = second.next;
+    second.next = first;
+    second.next = next;
+
+  }
 
 }
