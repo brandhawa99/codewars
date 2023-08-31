@@ -1,9 +1,10 @@
+/**
+ * @param {ListNode} head 
+ */
 const reorderList = (head) => {
   let mid = findMid(head);
   let rev = reverse(mid);
   reorder(head, rev);
-
-
 }
 
 const findMid = (head) => {
