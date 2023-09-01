@@ -7,6 +7,11 @@ const reorderList = (head) => {
   reorder(head, rev);
 }
 
+/**
+ * 
+ * @param {ListNode} head 
+ * @returns {ListNode}
+ */
 const findMid = (head) => {
   let fast = head;
   let slow = head;
