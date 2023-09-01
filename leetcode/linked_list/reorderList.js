@@ -23,6 +23,11 @@ const findMid = (head) => {
   return slow;
 }
 
+/**
+ * 
+ * @param {ListNode} head 
+ * @returns {ListNode}
+ */
 const reverse = (head) => {
   let [prev, next, curr] = [null, null, head];
 
