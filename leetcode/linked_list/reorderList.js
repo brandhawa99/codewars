@@ -41,6 +41,11 @@ const reverse = (head) => {
 
 }
 
+/**
+ * 
+ * @param {ListNode} l1 
+ * @param {ListNode} l2 
+ */
 const reorder = (l1, l2) => {
   let [first, second, next] = [l1, l2, null];
 
