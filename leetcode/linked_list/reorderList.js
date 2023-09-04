@@ -54,11 +54,9 @@ const reorder = (l1, l2) => {
     first.next = second;
     first = next;
 
-
     next = second.next;
     second.next = first;
     second.next = next;
 
   }
-
 }
