@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @param {ListNode} head 
+ * @returns {boolean};
+ */
 const hasCycle = (head) => {
 
   let fast = head;
