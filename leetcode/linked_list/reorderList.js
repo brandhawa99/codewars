@@ -5,6 +5,7 @@ const reorderList = (head) => {
   let mid = findMid(head);
   let rev = reverse(mid);
   reorder(head, rev);
+  return head;
 }
 
 /**
@@ -29,7 +30,8 @@ const findMid = (head) => {
  * @returns {ListNode}
  */
 const reverse = (head) => {
-  let [prev, next, curr] = [null, null, head];
+  let [prev, next, curr] = [null, null, head]
+
   while (curr) {
     next = curr.next;
     curr.next = prev;
@@ -38,7 +40,6 @@ const reverse = (head) => {
     curr = next;
   }
   return prev;
-
 }
 
 /**
@@ -47,16 +48,29 @@ const reverse = (head) => {
  * @param {ListNode} l2 
  */
 const reorder = (l1, l2) => {
-  let [first, second, next] = [l1, l2, null];
 
+  let [first, second, temp] = [l1, l2, null];
   while (second.next) {
-    next = first.next;
+    temp = first.next;
     first.next = second;
-    first = next;
+    first = temp;
 
-    next = second.next;
+    temp = second.next;
     second.next = first;
-    second.next = next;
+    second = temp;
 
   }
+
 }
+
+let val = {
+  val: 1, next: {
+    val: 2, next: {
+      val: 3, next: {
+        val: 4, next: null
+      }
+    }
+  }
+}
+
+console.log(reorderList(val));
