@@ -15,6 +15,8 @@ const addTwoNumbers = (l1, l2) => {
     let num1 = l1?.val || 0;
     let num2 = l2?.val || 0;
 
+    let sum = num1 + num2 + remainder;
+
 
 
   }
