@@ -17,6 +17,9 @@ const addTwoNumbers = (l1, l2) => {
 
     let sum = num1 + num2 + remainder;
 
+    let val = sum % 10;
+    remainder = Math.floor(sum / 10);
+
 
 
   }
