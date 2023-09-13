@@ -20,8 +20,12 @@ const addTwoNumbers = (l1, l2) => {
     let val = sum % 10;
     remainder = Math.floor(sum / 10);
 
+    curr.next = { val: val, next: null };
+    curr = curr.next;
 
+    l1 = l1?.next || null;
+    l2 = l2?.next || null;
 
   }
-  return {}
+  return head.next;
 }
