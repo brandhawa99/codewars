@@ -2,17 +2,21 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function(s) {
-    let seen= new Map();
-    let start = 0 ; 
-    let max = 0; 
+var lengthOfLongestSubstring = function (s) {
+    let set = new Set();
+    let l = 0;
+    let max = 0;
 
-    for(let i = 0 ; i < s.length; i++){
-        if(seen.has(s[i])){
-            start = Math.max(seen.get(s[i]) + 1, start); 
+    for (let i = 0; i < s.length; i++) {
+        while (set.has(s[i])) {
+            set.delete(s[l]);
+            l++;
         }
-        seen.set(s[i], i); 
-        max = Math.max(max, i - start +1); 
-    } 
-    return max; 
+        set.add(s[i]);
+        max = Math.max(max, set.size);
+    }
+    return max;
 };
+
+console.log(lengthOfLongestSubstring("aabcdef"));
+
