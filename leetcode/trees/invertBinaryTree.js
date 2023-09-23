@@ -12,4 +12,7 @@ const invertTree = (root) => {
 
   return root;
 
-} 
+}
+
+let v = { val: 1, left: { val: 1, left: null, right: null }, right: { val: 2, left: null, right: null } }
+invertTree(v)
