@@ -4,4 +4,5 @@ const diameterOfBinaryTree = (root) => {
   const dfs = (root) => {
 
   }
+  return res[0]
 }
