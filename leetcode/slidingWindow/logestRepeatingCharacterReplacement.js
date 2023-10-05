@@ -1,9 +1,11 @@
 
 /**
- * 
+ * Returns the largest string possible with k character replacements
+ * The length of the string subtracted by the must repeated character in the map must be < k
+ *  otherwise we subtract the oldest element in he map
  * @param {string} s 
  * @param {number} k 
- * @returns 
+ * @returns {number}
  */
 const characterReplacement = (s, k) => {
   let res = 0;
@@ -23,6 +25,7 @@ const characterReplacement = (s, k) => {
   }
   return res;
 }
+
 
 
 console.log(characterReplacement("ABBB", 2));
