@@ -1,7 +1,9 @@
 // given an array of string find the longest common prefix
-
+/** 
+ * @param {string[]} strs 
+ * @returns {string}
+ */
 const longestCommonPrefix = (strs) => {
-
   let output = strs[0]; 
 
   for(let i = 1; i < strs.length; i++){
@@ -15,4 +17,5 @@ const longestCommonPrefix = (strs) => {
     }
     output = output.slice(0,j); 
   }
+  return output
 }
