@@ -1,5 +1,9 @@
+/**
+ * 
+ * @param {number} x 
+ * @returns {boolean} 
+ */
 const isPalindrom = (x) =>{
-
   let num = x+""; 
   let [l,r,isPal] = [0, num.length -1, true];
 
@@ -8,7 +12,6 @@ const isPalindrom = (x) =>{
       isPal = false; 
       break; 
     }
-
     l++;
     r--; 
   }
