@@ -16,7 +16,9 @@ var reverseList = function (head) {
   let prev = null;
 
   while (curr) {
+
     let temp = curr.next;
+    //change direction of pointer
     curr.next = prev;
     prev = curr;
     curr = temp;
